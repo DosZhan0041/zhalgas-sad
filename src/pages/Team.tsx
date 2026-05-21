@@ -28,7 +28,7 @@ export default function Team() {
       <section className="page-hero" style={{ background: 'linear-gradient(135deg,#AB6FDB,#4D96FF)' }}>
         <div className="container">
           <h1>Ұжымымыз</h1>
-          <p>Балаларымызды тәрбиелейтін профессионал мамандар</p>
+          <p>Балаларымызды тәрбиелейтін кәсіби мамандар</p>
         </div>
       </section>
 

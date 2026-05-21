@@ -29,7 +29,7 @@ export default function Header() {
           </div>
           <div className="logo-text">
             <span className="logo-name">Жалғас</span>
-            <span className="logo-sub">Жеке меншік балабақша</span>
+            <span className="logo-sub">Жеке меншік сәби-балабақша</span>
           </div>
         </Link>
 
