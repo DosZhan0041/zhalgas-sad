@@ -1,6 +1,5 @@
 import {
   Award,
-  FileCheck,
   Languages,
   Target,
   Smile,
@@ -18,12 +17,7 @@ const advantages = [
     title: "Тәжірибелі ұжым",
     desc: "Орта тәжірибесі 10 жылдан асқан тәрбиешілер",
   },
-  {
-    icon: FileCheck,
-    color: "blue",
-    title: "Лицензия",
-    desc: "Білім беру қызметіне мемлекеттік лицензия бар",
-  },
+
   {
     icon: Languages,
     color: "teal",
