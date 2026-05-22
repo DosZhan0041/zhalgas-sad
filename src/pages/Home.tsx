@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  Sparkles,
   Users,
   Utensils,
   Palette,
@@ -454,10 +453,6 @@ export default function Home() {
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content">
-              <div className="hero-badge">
-                <Sparkles size={14} />
-                Лицензиялы жеке балабақша
-              </div>
               <h1>«Жалғас» балабақшасы</h1>
               <p className="hero-subtitle">
                 Балаңыздың бақытты, қауіпсіз және дамытушы ортада өсуін
