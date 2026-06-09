@@ -51,7 +51,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3>Телефон</h3>
-                    <a href="tel:77234424467">+7-723-442-44-67</a>
+                    <a href="tel:77715497112">+7-771-549-71-12</a>
                     <br />
                   </div>
                 </div>
@@ -64,7 +64,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3>WhatsApp</h3>
-                    <a href="https://wa.me/77234424467">+7-723-442-44-67</a>
+                    <a href="https://wa.me/77715497112">+7-771-549-71-12</a>
                     <p
                       style={{
                         fontSize: "0.82rem",

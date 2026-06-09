@@ -60,13 +60,13 @@ export default function Admission() {
                 Байланыс арқылы жазылу
               </h3>
               <div className="contact-options">
-                <a href="tel:77234424467" className="contact-option">
+                <a href="tel:77715497112" className="contact-option">
                   <div className="ic ic-sm ic-coral" style={{ width: 40, height: 40 }}><Phone size={18} /></div>
-                  <div><strong>Телефон</strong><p>8-723-4-424467</p></div>
+                  <div><strong>Телефон</strong><p>+7-771-549-71-12</p></div>
                 </a>
-                <a href="https://wa.me/77234424467" className="contact-option">
+                <a href="https://wa.me/77715497112" className="contact-option">
                   <div className="ic ic-sm ic-green" style={{ width: 40, height: 40 }}><MessageCircle size={18} /></div>
-                  <div><strong>WhatsApp</strong><p>8-723-4-424467</p></div>
+                  <div><strong>WhatsApp</strong><p>+7-771-549-71-12</p></div>
                 </a>
               </div>
             </div>

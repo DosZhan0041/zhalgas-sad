@@ -70,11 +70,11 @@ export default function Footer() {
           </div>
           <div className="footer-contact-item">
             <Phone size={15} />
-            <a href="tel:77234424467">8-723-4-424467</a>
+            <a href="tel:77715497112">+7-771-549-71-12</a>
           </div>
           <div className="footer-contact-item">
             <MessageCircle size={15} />
-            <a href="https://wa.me/77234424467">WhatsApp</a>
+            <a href="https://wa.me/77715497112">WhatsApp</a>
           </div>
           <div className="footer-contact-item">
             <Mail size={15} />

@@ -459,7 +459,7 @@ export default function Home() {
           <div className="hero-grid">
             {/* Left — text */}
             <div className="hero-content">
-              <h1>«Жалғас» балабақшасы</h1>
+              <h1>«Жалғас» жеке меншік сәби балабақшасы</h1>
               <p className="hero-subtitle">
                 Балаңыздың бақытты, қауіпсіз және дамытушы ортада өсуін
                 қамтамасыз етеміз. Кәсіби тәрбиешілер, жылы атмосфера, заманауи
