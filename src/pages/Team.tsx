@@ -1,31 +1,85 @@
-import { Briefcase, GraduationCap, Phone } from 'lucide-react'
+import { Briefcase, GraduationCap, Phone } from "lucide-react";
 
-const staff = [
+type Member = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon: any;
+  color: string;
+  name: string;
+  role: string;
+  photo?: string;
+};
+
+type StaffGroup = {
+  category: string;
+  bg?: string;
+  members: Member[];
+};
+
+const staff: StaffGroup[] = [
   {
-    category: 'Басшылық',
-    bg: 'section-blue',
+    category: "Басшылық",
+    bg: "section-blue",
     members: [
-      { icon: Briefcase, color: 'blue', name: 'Ракишов Қайрат Кошкентаевич', role: 'Меңгеруші', photo: '/images/rakishov.jpg' },
+      {
+        icon: Briefcase,
+        color: "blue",
+        name: "Ракишов Қайрат Кошкентаевич",
+        role: "Меңгеруші",
+        photo: "/images/rakishov.jpg",
+      },
     ],
   },
   {
-    category: 'Тәрбиешілер',
-    bg: '',
+    category: "Тәрбиешілер",
+    bg: "",
     members: [
-      { icon: GraduationCap, color: 'coral',  name: 'Абылхасимова Майгүл Айтмұқашевна', role: 'Тәрбиеші' },
-      { icon: GraduationCap, color: 'orange', name: 'Байрова Назым Бағдатовна',          role: 'Тәрбиеші' },
-      { icon: GraduationCap, color: 'yellow', name: 'Мұратқызы Гүлсара',                role: 'Тәрбиеші' },
-      { icon: GraduationCap, color: 'green',  name: 'Қойшина Жанарғүл Зарыққанқызы',   role: 'Тәрбиеші' },
-      { icon: GraduationCap, color: 'purple', name: 'Сандыбаева Динара Елемесовна',     role: 'Тәрбиеші' },
-      { icon: GraduationCap, color: 'teal',   name: 'Хамитова Майгүль Анваровна',       role: 'Тәрбиеші' },
+      {
+        icon: GraduationCap,
+        color: "coral",
+        name: "Абылхасимова Майгүл Айтмұқашевна",
+        role: "Тәрбиеші",
+      },
+      {
+        icon: GraduationCap,
+        color: "orange",
+        name: "Байрова Назым Бағдатовна",
+        role: "Тәрбиеші",
+      },
+      {
+        icon: GraduationCap,
+        color: "yellow",
+        name: "Мұратқызы Гүлсара",
+        role: "Тәрбиеші",
+      },
+      {
+        icon: GraduationCap,
+        color: "green",
+        name: "Қойшина Жанарғүл Зарыққанқызы",
+        role: "Тәрбиеші",
+      },
+      {
+        icon: GraduationCap,
+        color: "purple",
+        name: "Сандыбаева Динара Елемесовна",
+        role: "Тәрбиеші",
+      },
+      {
+        icon: GraduationCap,
+        color: "teal",
+        name: "Хамитова Майгүль Анваровна",
+        role: "Тәрбиеші",
+      },
     ],
   },
-]
+];
 
 export default function Team() {
   return (
     <main>
-      <section className="page-hero" style={{ background: 'linear-gradient(135deg,#AB6FDB,#4D96FF)' }}>
+      <section
+        className="page-hero"
+        style={{ background: "linear-gradient(135deg,#AB6FDB,#4D96FF)" }}
+      >
         <div className="container">
           <h1>Ұжымымыз</h1>
           <p>Балаларымызды тәрбиелейтін кәсіби мамандар</p>
@@ -42,9 +96,22 @@ export default function Team() {
               {group.members.map((m, mi) => (
                 <div key={mi} className="team-card">
                   {m.photo ? (
-                    <img src={m.photo} alt={m.name} style={{ width: 120, height: 140, objectFit: 'cover', borderRadius: 12, marginBottom: 12 }} />
+                    <img
+                      src={m.photo}
+                      alt={m.name}
+                      style={{
+                        width: 120,
+                        height: 140,
+                        objectFit: "cover",
+                        borderRadius: 12,
+                        marginBottom: 12,
+                      }}
+                    />
                   ) : (
-                    <div className={`ic ic-lg ic-${m.color}`} style={{ width: 72, height: 72 }}>
+                    <div
+                      className={`ic ic-lg ic-${m.color}`}
+                      style={{ width: 72, height: 72 }}
+                    >
                       <m.icon size={32} />
                     </div>
                   )}
@@ -61,13 +128,24 @@ export default function Team() {
         <div className="container">
           <div className="cta-box">
             <h2>Бізде жұмысқа орын бар!</h2>
-            <p>Тәрбиеші немесе маман ретінде жұмысқа орналасқыңыз келсе — бізге хабарласыңыз</p>
-            <a href="tel:77234424467" className="btn btn-outline-white" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            <p>
+              Тәрбиеші немесе маман ретінде жұмысқа орналасқыңыз келсе — бізге
+              хабарласыңыз
+            </p>
+            <a
+              href="tel:77234424467"
+              className="btn btn-outline-white"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+              }}
+            >
               <Phone size={18} /> Байланысу
             </a>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
