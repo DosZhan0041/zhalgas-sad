@@ -5,11 +5,7 @@ import {
   Palette,
   HeartPulse,
   ShieldCheck,
-  BookOpen,
-  Music,
-  Dumbbell,
-  Globe,
-  Leaf,
+  ArrowRight,
 } from "lucide-react";
 
 const STAR_POSITIONS = [
@@ -145,7 +141,7 @@ function HeroDecorations() {
         />
       </svg>
 
-      {/* ⭐ Stars — scattered, twinkling */}
+      {/* ⭐ Stars */}
       {STAR_POSITIONS.map((s, i) => (
         <svg
           key={i}
@@ -164,7 +160,7 @@ function HeroDecorations() {
         </svg>
       ))}
 
-      {/* 🎈 Balloon 1 — coral, right side floating */}
+      {/* 🎈 Balloon 1 — coral */}
       <svg
         style={{
           top: "17%",
@@ -187,7 +183,7 @@ function HeroDecorations() {
         <ellipse cx="15" cy="17" rx="5" ry="7" fill="rgba(255,255,255,0.3)" />
       </svg>
 
-      {/* 🎈 Balloon 2 — blue, left side floating */}
+      {/* 🎈 Balloon 2 — blue */}
       <svg
         className="hide-sm"
         style={{
@@ -211,7 +207,7 @@ function HeroDecorations() {
         <ellipse cx="15" cy="17" rx="5" ry="7" fill="rgba(255,255,255,0.3)" />
       </svg>
 
-      {/* 🎈 Balloon 3 — green, left side floating */}
+      {/* 🎈 Balloon 3 — green */}
       <svg
         className="hide-sm"
         style={{
@@ -268,7 +264,7 @@ function HeroDecorations() {
         <circle cx="27" cy="27" r="3" fill="rgba(255,255,255,0.4)" />
       </svg>
 
-      {/* 🌊 White wave — bottom edge transition */}
+      {/* 🌊 White wave — bottom edge */}
       <div
         style={{
           position: "absolute",
@@ -432,19 +428,28 @@ const features = [
   },
 ];
 
-const activities = [
-  { icon: Palette, color: "purple", label: "Шығармашылық" },
-  { icon: BookOpen, color: "blue", label: "Оқу" },
-  { icon: Music, color: "pink", label: "Музыка" },
-  { icon: Dumbbell, color: "coral", label: "Спорт" },
-  { icon: Leaf, color: "green", label: "Табиғат" },
-  { icon: Globe, color: "teal", label: "Тілдер" },
+const galleryPreview = [
+  {
+    src: "/images/ulttyk.jpg",
+    label: "Ұжым",
+    color: "coral",
+  },
+  {
+    src: "/images/kuz-2.jpg",
+    label: "Шығармашылық",
+    color: "purple",
+  },
+  {
+    src: "/images/zhana-zhyl.jpg",
+    label: "Жаңа жыл",
+    color: "blue",
+  },
 ];
 
 export default function Home() {
   return (
     <main>
-      {/* Hero */}
+      {/* ===== Hero ===== */}
       <section className="hero-home">
         <HeroDecorations />
         <div className="hero-blob hero-blob-1" />
@@ -452,6 +457,7 @@ export default function Home() {
         <div className="hero-blob hero-blob-3" />
         <div className="container">
           <div className="hero-grid">
+            {/* Left — text */}
             <div className="hero-content">
               <h1>«Жалғас» балабақшасы</h1>
               <p className="hero-subtitle">
@@ -467,37 +473,21 @@ export default function Home() {
                   Біз туралы
                 </Link>
               </div>
-              {/* <div className="hero-stats">
-                <div className="stat">
-                  <span className="stat-num">200+</span>
-                  <span className="stat-label">Балалар</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-num">15+</span>
-                  <span className="stat-label">Тәрбиешілер</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-num">10</span>
-                  <span className="stat-label">Жыл тәжірибе</span>
-                </div>
-              </div> */}
             </div>
 
-            <div className="hero-cards-grid">
-              {activities.map((a, i) => (
-                <div key={i} className="hero-activity-card">
-                  <div className={`ic ic-sm`}>
-                    <a.icon size={20} />
-                  </div>
-                  <span>{a.label}</span>
-                </div>
-              ))}
+            {/* Right — children photo */}
+            <div className="hero-image-wrap">
+              <img
+                src="/images/kz.jpg"
+                alt="Жалғас балабақшасы балалары"
+                className="hero-photo"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features */}
+      {/* ===== Features ===== */}
       <section className="section bg-polka">
         <div className="container">
           <div className="section-header">
@@ -518,60 +508,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About preview */}
-      {/* <section className="section section-blue">
+      {/* ===== About preview ===== */}
+      <section className="section section-blue">
         <div className="container">
-          <div className="two-col" style={{ alignItems: 'center' }}>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <div style={{
-                width: 280, height: 280, borderRadius: '50%',
-                background: 'linear-gradient(135deg,#EBF3FF,#D6EAFF)',
-                display: 'flex', flexDirection: 'column',
-                alignItems: 'center', justifyContent: 'center', gap: '1rem',
-                boxShadow: '0 8px 40px rgba(77,150,255,0.15)'
-              }}>
-                <div className="ic ic-xl ic-blue" style={{ width: 100, height: 100 }}>
-                  <BookOpen size={44} />
-                </div>
-                <span style={{ fontWeight: 800, fontSize: '1rem', color: 'var(--blue)' }}>2014 жылдан бері</span>
-              </div>
+          <div className="two-col about-col" style={{ alignItems: "center" }}>
+            <div className="about-img-wrap">
+              <img
+                src="/images/kz2.jpg"
+                alt="Балабақша оқушылары"
+                className="about-photo"
+              />
             </div>
             <div className="about-text">
               <h2>Балабақша туралы</h2>
               <p>
-                «Жалғас» балабақшасы 2014 жылдан бастап жұмыс жасайды. Біз мектепке дейінгі
-                балаларды кешенді дамытуға, олардың физикалық, зияткерлік және эмоционалдық
-                өсуіне ерекше мән береміз.
+                «Жалғас» жеке меншік сәби-балабақшасы. Біз мектепке дейінгі
+                балаларды кешенді дамытуға, олардың физикалық, зияткерлік және
+                эмоционалдық өсуіне ерекше мән береміз.
               </p>
               <p>
-                Балабақшамызда жылы, үй атмосферасы сақталып, әрбір бала жеке тұрғыда
-                қарастырылады. Тәрбиешілеріміз — өз ісінің шеберлері.
+                Балабақшамызда жылы, үй атмосферасы сақталып, әрбір бала жеке
+                тұрғыда қарастырылады. Тәрбиешілеріміз — өз ісінің шеберлері.
               </p>
-              <Link to="/about" className="btn btn-primary">Толығырақ</Link>
+              <Link to="/about" className="btn btn-primary">
+                Толығырақ <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* News */}
-      {/* <section className="section">
+      {/* ===== Gallery preview ===== */}
+      <section className="section">
         <div className="container">
           <div className="section-header">
-            <h2>Соңғы жаңалықтар</h2>
-            <p>Балабақшадағы өмірден хабар</p>
+            <h2>Фотогалерея</h2>
+            <p>Балабақшадағы өмірден суреттер</p>
           </div>
           <div className="grid-3">
-            {news.map((n, i) => (
-              <div key={i} className="news-card" style={{ borderLeftColor: `var(--${n.color})` }}>
-                <p className="news-date">{n.date}</p>
-                <h3>{n.title}</h3>
+            {galleryPreview.map((item, i) => (
+              <div key={i} className="home-gallery-card">
+                <div className="home-gallery-img">
+                  <img src={item.src} alt={item.label} />
+                </div>
+                <div className="home-gallery-info">
+                  <span
+                    className={`gallery-cat`}
+                    style={{ color: `var(--${item.color})` }}
+                  >
+                    {item.label}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
+          <div style={{ textAlign: "center", marginTop: "2rem" }}>
+            <Link to="/gallery" className="btn btn-outline">
+              Толық галерея <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* CTA */}
+      {/* ===== CTA ===== */}
       <section className="section cta-section" style={{ position: "relative" }}>
         <CtaDecorations />
         <div className="container">

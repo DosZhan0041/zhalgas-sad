@@ -5,7 +5,7 @@ const staff = [
     category: 'Басшылық',
     bg: 'section-blue',
     members: [
-      { icon: Briefcase,     color: 'blue',   name: 'Ракишов Қайрат Қошқентаевич',     role: 'Меңгеруші' },
+      { icon: Briefcase, color: 'blue', name: 'Ракишов Қайрат Кошкентаевич', role: 'Меңгеруші', photo: '/images/rakishov.jpg' },
     ],
   },
   {
@@ -41,9 +41,13 @@ export default function Team() {
             <div className="team-grid">
               {group.members.map((m, mi) => (
                 <div key={mi} className="team-card">
-                  <div className={`ic ic-lg ic-${m.color}`} style={{ width: 72, height: 72 }}>
-                    <m.icon size={32} />
-                  </div>
+                  {m.photo ? (
+                    <img src={m.photo} alt={m.name} style={{ width: 120, height: 140, objectFit: 'cover', borderRadius: 12, marginBottom: 12 }} />
+                  ) : (
+                    <div className={`ic ic-lg ic-${m.color}`} style={{ width: 72, height: 72 }}>
+                      <m.icon size={32} />
+                    </div>
+                  )}
                   <h3>{m.name}</h3>
                   <p className="team-role">{m.role}</p>
                 </div>
